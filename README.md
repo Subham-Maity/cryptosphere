@@ -12,13 +12,14 @@ Thanks to these **Wonderful People** 👨🏻‍💻 <br>
 	<tr>
 		 <td>
  <a href="https://github.com/Subham-Maity/cryptoapp/graphs/contributors">
-  <img src="https://github.com/Subham-Maity/cryptoapp" />
+  <img src="https://contrib.rocks/image?repo=Subham-Maity/cryptoapp" />
 </a>
   </a>
 		</td>
 	</tr>
 </table>
 
+⭐ Star this repo on GitHub — it helps!
 ************
 ## Steps for making this project 
 
