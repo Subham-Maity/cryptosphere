@@ -86,7 +86,7 @@ const MyComponent = () => {
 export default MyComponent;
 ```
 
-**10. Open your terminal and type and look at your browser** 
+**10. Open your terminal and type 'npm start'(allow network) and look at your browser** 
 ```text
 npm start
 ```
