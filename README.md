@@ -2,15 +2,20 @@
 
 <hr>
 
-### Frontend 
-#### 1. Using RapidAPI ⭐
-#### 2. ReactJS ⭐
-#### 3. JS ⭐
-#### 4. HTML ⭐
-#### 5. CSS ⭐
-### Smart contract for its functionality(backend) Using P2P network
-#### 6. Solidity ⭐
+### 1. Frontend 
+⭐ **Using RapidAPI** 
+⭐ **ReactJS** 
+⭐ **JS** 
+⭐ **HTML**
+⭐ **CSS**  /Tailwind
 
+### 2. Smart contract for its functionality(backend) Using P2P network
+
+⭐ **Solidity** 
+
+### 3. Api 
+⭐ [**Coin Ranking Api**](https://rapidapi.com/Coinranking/api/coinranking1/)
+⭐ [**Paw**](https://paw.app/)
 <hr>
 
 <h2 align=center>Contributors in This Project✨</h2>
