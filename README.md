@@ -1,25 +1,4 @@
 # Crypto App made By [Subham](https://subham-maity.github.io/subham/) 
-
-
-<hr>
-
-<h2 align=center>Contributors in This Project✨</h2>
-
-Thanks to these **Wonderful People** 👨🏻‍💻 <br>
-**Contributions** of any kind are welcome! 🚀
-
-<table>
-	<tr>
-		 <td>
- <a href="https://github.com/Subham-Maity/cryptoapp/graphs/contributors">
-  <img src="https://github.com/Subham-Maity/cryptoapp" />
-</a>
-  </a>
-		</td>
-	</tr>
-</table>
-
-
 ************
 ## Steps for making this project 
 
