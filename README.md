@@ -91,8 +91,18 @@ export default MyComponent;
 npm start
 ```
  
+- For terminate the app just type on your terminal "Ctrl" + "C" and press Y
+- then type clear for clear the terminal 
+```text
+clear
+```
 
+**11. we can start by installing all the  necessary dependencies we can install  the dependencies by typing npm install  and now we can start listing all of the  dependencies  for styling we're going to use and  design so you can simply type and d  then we also need and dash design  forward slash icons for the icons we are  also going to use redux so you can  install react dash redux and add redux  js forward slash toolkit  then we're also going to use axios to  make api requests we're going to use  chart.js to create charts  we're going to use html react parser to  parse some html data we're also going to  use a hand a little package called  milify that's going to transform  extremely large numbers into readable  strings  finally we're going to use moment to  parse times and dates  and we also need react dash chart js  dash 2 to render those charts from  charges in our react application  there we go these are all the packages  that we need you can simply press enter  and we're going to wait a few moments**
 
+```txt
+npm install antd @ant-design/icons react-redux @reduxjs/toolkit axios chart.js html-react-parser millify moment react-chartjs-2
+
+```
 
 
 
