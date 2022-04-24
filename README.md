@@ -1,6 +1,15 @@
 # Web3 Based Crypto Verse Application made By [Subham](https://subham-maity.github.io/subham/)
 
+<hr>
 
+### Frontend 
+#### 1. Using RapidAPI ⭐
+#### 2. ReactJS ⭐
+#### 3. JS ⭐
+#### 4. HTML ⭐
+#### 5. CSS ⭐
+### Smart contract for its functionality(backend) Using P2P network
+#### 6. Solidity ⭐
 
 <hr>
 
@@ -174,7 +183,7 @@ export default MyComponent;
 
 **15. Type rfc for boilerplate in Navbar.jsx**
 
-16. For creating the navbar import some library 
+**16. For creating the navbar import some library** 
 ```text
 import React, { useState, useEffect } from 'react';
 import { Button, Menu, Typography, Avatar } from 'antd';
