@@ -138,16 +138,16 @@ npm start
 **13.** 
 - Now open App.js and import this 
 ```text
-import  { Switch, Route, Link } from 'react-router-dom';
-import  { Layout, Typography, Space } from 'antd';
+import { Switch, Route, Link } from 'react-router-dom';
+import { Layout, Typography, Space } from 'antd';
 ```
 and delete the heading and create three div for navbar main and footer 
 
 - Entire code like this 
 ```jsx
 import React from 'react';
-import  { Switch, Route, Link } from 'react-router-dom';
-import  { Layout, Typography, Space } from 'antd';
+import { Switch, Route, Link } from 'react-router-dom';
+import { Layout, Typography, Space } from 'antd';
 
 
 const MyComponent = () => {
@@ -168,4 +168,9 @@ const MyComponent = () => {
 export default MyComponent;
 ```
 
-14. Create a folder in SRC file name this components 
+**14. Create a folder in SRC folder name this folder as "components" and make a file Navbar.jsx inside components folder** 
+
+
+**15. Type rfc for boilerplate in Navbar.jsx**
+
+
