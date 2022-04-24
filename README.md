@@ -2,20 +2,31 @@
 
 <hr>
 
+## Working Frameworks
+
 ### 1. Frontend 
 ⭐ **Using RapidAPI** 
 ⭐ **ReactJS** 
-⭐ **JS** 
-⭐ **HTML**
+⭐ **JS** [learn javascript from my js bootcamp [here](https://github.com/Subham-Maity/js-bootcamp)]
+⭐ **HTML**[learn HTML from my HTML bootcamp [here](https://github.com/Subham-Maity/html-tutorial-for-beginners)]
 ⭐ **CSS**  /Tailwind
 
 ### 2. Smart contract for its functionality(backend) Using P2P network
 
 ⭐ **Solidity** 
+- learn solidity from my Solidity bootcamp [here](https://github.com/Subham-Maity/solidity-tutorial)
+
+(Solidity is an object-oriented, high-level language for implementing smart contracts on various blockchain platforms, most notably, Ethereum)
 
 ### 3. Api 
 ⭐ [**Coin Ranking Api**](https://rapidapi.com/Coinranking/api/coinranking1/)
 ⭐ [**Paw**](https://paw.app/)
+
+### 4.Blockchain
+⭐ **Ethereum Blockchain**
+
+- learn blockchain from my documentation from [here](https://github.com/Subham-Maity/blockchain-basic)
+- learn Ethereum from my documentation from [here](https://github.com/Subham-Maity/ethereum-tutorial)
 <hr>
 
 <h2 align=center>Contributors in This Project✨</h2>
@@ -195,4 +206,41 @@ import { Button, Menu, Typography, Avatar } from 'antd';
 import { Link } from 'react-router-dom';
 import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined } from '@ant-design/icons';
 ```
+**17. We are gonna use some components(avatar,typography from antd) for this project and for now don't use button we are using it for phone later** 
+
+- [ For more design you can find all the design from [**here**](https://ant.design/) ]
+
+let's do this in your navbar.jsx for adding avatar typography and so on 
+
+```jsx
+<div className="nav-container">
+      <div className="logo-container">
+        <Avatar/>
+        <Typography.Title level={2} className="logo">
+            <Link to="/">Cryptoverse</Link></Typography.Title>
+        {/*<Button className="menu-control-container" onClick={() => setActiveMenu(!activeMenu)}><MenuOutlined /></Button>*/}
+      </div>
+    </div>
+```
+
+
+**18. Now we are gonna add icon for our avatar you can download it from** [**here**](https://i.ibb.co/Z11pcGG/cryptocurrency.png)
+- make a folder "images" in src folder 
+- download the [image](https://i.ibb.co/Z11pcGG/cryptocurrency.png) and paste it on the images folder
+- and drag it on to our image folder 
+- edit the html avatar tag like this
+```html
+<Avatar src={icon} size="large" />
+```
+- and now import image location for icon  like this
+```jsx
+import icon from '../images/cryptocurrency.png';
+```
+**19. let's import this navigation bar into our App.js so that we can display it right here(App.js)**  
+
+- components  from the components, folder looks like  this you would say
+- 
+
+
+
 
