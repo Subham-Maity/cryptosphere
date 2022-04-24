@@ -37,7 +37,7 @@ like this
     <meta name="description" content="Web site created using create-react-app"/>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>React App</title>
+    <title>CryptoApp</title>
   </head>
   <body>
   <div id="root"></div>
@@ -47,7 +47,52 @@ like this
 ```
 - You can copy this and paste on your index file 
 
-7. 
+**7. Make an app.js inside the SRC file** 
+
+**8. Simple type rsc in WebStorm / type rafce in Vscode(install this app plugins ES7 React/Redux/GraphQL/React-Native snippets)** 
+
+for this boilerplate 
+
+```jsx
+import React from 'react';
+
+const MyComponent = () => {
+    return (
+        <div>
+
+        </div>
+    );
+};
+
+export default MyComponent;
+
+```
+
+**9. Now add heading 'Cryptoverse' like this**
+
+```jsx
+import React from 'react';
+
+const MyComponent = () => {
+    return (
+        <div>
+
+            <h1>Cryptoverse</h1>
+
+        </div>
+    );
+};
+
+export default MyComponent;
+```
+
+**10. Open your terminal and type and look at your browser** 
+```text
+npm start
+```
+ 
+
+
 
 
 
