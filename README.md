@@ -62,7 +62,8 @@ npx create-react-app ./
 **4. Delete the source folder which already made and create a source folder by yourself**
 
 **5.Create index.js inside the SRC folder and Import this** 
-```jsx
+```js
+//index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
@@ -76,6 +77,7 @@ document.getElementById then '**root**' to hook our app onto our root div
 
 like this 
 ```html
+<!--index.html-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -103,6 +105,7 @@ like this
 for this boilerplate 
 
 ```jsx
+//App.js
 import React from 'react';
 
 const MyComponent = () => {
@@ -120,6 +123,7 @@ export default MyComponent;
 **9. Now add heading 'Cryptoverse' like this**
 
 ```jsx
+//App.js
 import React from 'react';
 
 const MyComponent = () => {
@@ -163,7 +167,8 @@ npm start
 
 **13.** 
 - Now open App.js and import this 
-```text
+```js
+//App.js
 import { Switch, Route, Link } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd';
 ```
@@ -171,6 +176,7 @@ and delete the heading and create three div for navbar main and footer
 
 - Entire code like this 
 ```jsx
+//App.js
 import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd';
@@ -200,7 +206,8 @@ export default MyComponent;
 **15. Type rfc for boilerplate in Navbar.jsx**
 
 **16. For creating the navbar import some library** 
-```text
+```jsx
+//navbar.js
 import React, { useState, useEffect } from 'react';
 import { Button, Menu, Typography, Avatar } from 'antd';
 import { Link } from 'react-router-dom';
@@ -213,6 +220,7 @@ import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOut
 let's do this in your navbar.jsx for adding avatar typography and so on 
 
 ```jsx
+<!--Navbar.js-->
 <div className="nav-container">
       <div className="logo-container">
         <Avatar/>
@@ -230,17 +238,57 @@ let's do this in your navbar.jsx for adding avatar typography and so on
 - and drag it on to our image folder 
 - edit the html avatar tag like this
 ```html
+<!--Navbar.js-->
 <Avatar src={icon} size="large" />
 ```
 - and now import image location for icon  like this
 ```jsx
+//Navbar.js
 import icon from '../images/cryptocurrency.png';
 ```
 **19. let's import this navigation bar into our App.js so that we can display it right here(App.js)**  
 
-- components  from the components, folder looks like  this you would say
-- 
+- components  from the components, folder looks like  this
+```jsx
+ import Navbar from './components/Navbar';
+```
+it's fine for one line or two lines or even three lines but later on you're going to have more components here it's not going to be just snap navbar and your code would look like this
+
+```jsx
+import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
+```
+so on....
+
+- That's definitely not efficient or good-looking you're cluttering your view ,so I'm going to show you a little trick
+- that's going to allow you to import all the components in one line
+- to do that we can create a new file inside the 'components' folder called "index.js" inside here you can import this like import then curly braces....like this
+```jsx
+//index.js
+import { default as Navbar } from './Navbar';
+```
+this one line is going to allow us to import navbar in a different way
 
 
+if we go to again App.js you no longer have to do it like this what you can do is like this 
 
+```jsx
+//App.js
+ import { Navbar } from './components';
+```
+Now add more like this
 
+```jsx
+//App.js
+ import { Navbar, Layout, Footer } from './components';
+```
+
+put navbar in curly braces and then  simply say dot slash components and now  all the components that you export  from here  are going to be importable like this  now bar we're gonna have for example a  layout  we're going to have footer  this seems really meaningful import  navbar layout and footer from components  ,and it's also in one line so that's a  cool little trick that you can use in  your React applications
