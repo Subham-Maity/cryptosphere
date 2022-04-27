@@ -272,7 +272,7 @@ so on....
 - that's going to allow you to import all the components in one line
 - to do that we can create a new file inside the 'components' folder called "index.js" inside here you can import this like import then curly braces....like this
 ```jsx
-//index.js
+//index.js(component)
 import { default as Navbar } from './Navbar';
 ```
 this one line is going to allow us to import navbar in a different way
@@ -281,14 +281,51 @@ this one line is going to allow us to import navbar in a different way
 if we go to again App.js you no longer have to do it like this what you can do is like this 
 
 ```jsx
-//App.js
+//index.js(src)
  import { Navbar } from './components';
 ```
 Now add more like this
 
 ```jsx
-//App.js
- import { Navbar, Layout, Footer } from './components';
+//index.js (component)
+ export { Navbar, Layout, Footer } from './components';
 ```
 
 put navbar in curly braces and then  simply say dot slash components and now  all the components that you export  from here  are going to be importable like this  now bar we're gonna have for example a  layout  we're going to have footer  this seems really meaningful import  navbar layout and footer from components  ,and it's also in one line so that's a  cool little trick that you can use in  your React applications
+
+
+
+
+**20.We are gonna export from index.js(component) to import app.js.Now we have to install " react router dom "**
+
+for this do like this 
+
+go to your app.js and open terminal and type
+```text
+ npm install react-router-dom
+```
+if your try to start npm start you might be faced an issue so for that you have to do 
+
+go to your app.js and import this 
+
+```jsx
+//app.js
+import { Switch, Route, Link } from 'react-router-dom';
+```
+
+Now so to be able to use links and other  things you need to wrap our app with the  router  so right inside here we can add the  router component ,and you need to put the app component inside it then that's going to look  something like this
+
+```jsx
+ReactDOM.render(
+  <React.StrictMode>
+    <Router>
+        <App />
+    </Router>,
+      document.getElementById('root')
+      );
+```
+
+Then just do open app.js and open terminal 
+```text
+npm start
+```
