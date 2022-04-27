@@ -719,3 +719,46 @@ Now import this css on your App.js file like this
 //App.js
 import './App.css';
 ```
+**22. navbar - menu**
+- A menu is a component coming from ant design a menu is going to have a theme equal to dark 
+- and inside there we can have  different menu items so let's create our  first menu
+- we  already imported it but make sure to call it as a component with the opening component tag 
+- make sure to  self-close it is like this is our menu item inside our menu  item 
+- we are going to have a link tag so  in here we can say link  and more specifically the first one is  going to be 2 which is going to be equal to just forward slash which is our home  component  
+- we can duplicate this link a few  more times  
+- the second one is going to have the fund outlined icon,and it's going to go to cryptocurrencies  and of course d2 is also going to be slashed cryptocurrencies with the lowercase c 
+- Then third icon is going to be  money  collect  outlined  this link is going to go to exchanges  and of course we can go to forward slash  exchanges with a lowercase e  f
+- finally the last thing we can have a  bulb outlined icon 
+- In here it's  going to point to news and then again  four slash news with a lowercase n  this is going to be our menu 
+- let's save  it and take a look in the browser
+
+```jsx
+
+//navbar.jsx
+/*<div className="nav-container">
+      <div className="logo-container">
+        <Avatar src={icon} size="large" />
+        <Typography.Title level={2} className="logo"><Link to="/">Cryptoverse</Link></Typography.Title>
+        <Button className="menu-control-container" onClick={() => setActiveMenu(!activeMenu)}><MenuOutlined /></Button>
+      </div>*/
+       
+   
+      
+      <Menu theme="dark">
+        <Menu.Item icon={<HomeOutlined />}>
+          <Link to="/">Home</Link>
+        </Menu.Item>
+        <Menu.Item icon={<FundOutlined />}>
+          <Link to="/cryptocurrencies">Cryptocurrencies</Link>
+        </Menu.Item>
+        <Menu.Item icon={<MoneyCollectOutlined />}>
+          <Link to="/exchanges">Exchanges</Link>
+        </Menu.Item>
+        <Menu.Item icon={<BulbOutlined />}>
+          <Link to="/news">News</Link>
+        </Menu.Item>
+      </Menu> 
+</div>
+);
+    
+```
