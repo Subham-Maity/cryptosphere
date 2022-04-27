@@ -316,6 +316,7 @@ import { Switch, Route, Link } from 'react-router-dom';
 Now so to be able to use links and other  things you need to wrap our app with the  router  so right inside here we can add the  router component ,and you need to put the app component inside it then that's going to look  something like this
 
 ```jsx
+//app.js
 ReactDOM.render(
   <React.StrictMode>
     <Router>
