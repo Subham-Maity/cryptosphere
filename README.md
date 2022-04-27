@@ -330,7 +330,7 @@ Then just do open app.js and open terminal
 ```text
 npm start
 ```
-21. For design, you have to make a css file(App.css) and just paste this on the file you make 
+**21. For design, you have to make a css file(App.css) and just paste this on the file you make** 
 ```css
 
 :root{
@@ -711,4 +711,11 @@ width: 70%;
     padding: 20px;
     align-items: center;
 }
+```
+
+Now import this css on your App.js file like this 
+
+```jsx
+//App.js
+import './App.css';
 ```
