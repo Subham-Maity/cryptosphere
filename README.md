@@ -936,30 +936,30 @@ to start fetching our data we are going  to go back to the rapid apis hub and  w
 
 https://rapidapi.com/Coinranking/api/coinranking1/
 
+<p align="center">
+        <img src="https://github.com/Subham-Maity/cryptoapp/blob/master/image(ignore)/1.png?raw=true"/>
+        </p>
+
+
 ```js
-const axios = require("axios");
+//cryptoApi.js(services)
 
 const options = {
-  method: 'GET',
-  url: 'https://coinranking1.p.rapidapi.com/coins',
-  params: {
-    referenceCurrencyUuid: 'yhjMzLPhuIDl',
-    timePeriod: '24h',
-    'tiers[0]': '1',
-    orderBy: 'marketCap',
-    orderDirection: 'desc',
-    limit: '50',
-    offset: '0'
-  },
-  headers: {
-    'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com',
-    'X-RapidAPI-Key': '1d871cceacmshba48ac5bae3dc58p111f7bjsna1305d8edcc1'
-  }
+    method: 'GET',
+    url: 'https://coinranking1.p.rapidapi.com/coins',
+    params: {
+        referenceCurrencyUuid: 'yhjMzLPhuIDl',
+        timePeriod: '24h',
+        'tiers[0]': '1',
+        orderBy: 'marketCap',
+        orderDirection: 'desc',
+        limit: '50',
+        offset: '0'
+    },
+    headers: {
+        'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com',
+        'X-RapidAPI-Key': '1d871cceacmshba48ac5bae3dc58p111f7bjsna1305d8edcc1'
+    }
 };
-
-axios.request(options).then(function (response) {
-	console.log(response.data);
-}).catch(function (error) {
-	console.error(error);
-});
 ```
+
