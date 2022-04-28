@@ -9,7 +9,6 @@ import News from './News';
 import Loader from './Loader';
 
 const { Title } = Typography;
-
 const Homepage = () => {
   const { data, isFetching } = useGetCryptosQuery(10);
   const globalStats = data?.data?.stats;
@@ -18,7 +17,8 @@ const Homepage = () => {
 
   return (
     <>
-      <Title level={2} className="heading">Global Crypto Stats</Title>
+      <Title level={2} className="heading">Global Crypto Stats from Cryptoxam</Title>
+
       <Row gutter={[32, 32]}>
         <Col span={12}><Statistic title="Total Cryptocurrencies" value={globalStats.total} /></Col>
         <Col span={12}><Statistic title="Total Exchanges" value={millify(globalStats.totalExchanges)} /></Col>
@@ -40,5 +40,4 @@ const Homepage = () => {
     </>
   );
 };
-
 export default Homepage;

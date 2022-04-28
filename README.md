@@ -120,7 +120,7 @@ export default MyComponent;
 
 ```
 
-**9. Now add heading 'Cryptoverse' like this**
+**9. Now add heading 'Cryptoxam' like this**
 
 ```jsx
 //App.js
@@ -130,7 +130,7 @@ const MyComponent = () => {
     return (
         <div>
 
-            <h1>Cryptoverse</h1>
+            <h1>Cryptoxam</h1>
 
         </div>
     );
@@ -225,7 +225,7 @@ let's do this in your navbar.jsx for adding avatar typography and so on
       <div className="logo-container">
         <Avatar/>
         <Typography.Title level={2} className="logo">
-            <Link to="/">Cryptoverse</Link></Typography.Title>
+            <Link to="/">Cryptoxam</Link></Typography.Title>
         {/*<Button className="menu-control-container" onClick={() => setActiveMenu(!activeMenu)}><MenuOutlined /></Button>*/}
       </div>
     </div>
@@ -738,7 +738,7 @@ import './App.css';
 /*<div className="nav-container">
       <div className="logo-container">
         <Avatar src={icon} size="large" />
-        <Typography.Title level={2} className="logo"><Link to="/">Cryptoverse</Link></Typography.Title>
+        <Typography.Title level={2} className="logo"><Link to="/">Cryptoxam</Link></Typography.Title>
         <Button className="menu-control-container" onClick={() => setActiveMenu(!activeMenu)}><MenuOutlined /></Button>
       </div>*/
        
@@ -849,8 +849,9 @@ in your App.js folder**
  import 'antd/dist/antd.css';
 ```
 
-27.Let's make our footer part open App.js and add this 
+**27.Let's make our footer part open App.js and add this** 
 ```jsx
+// App.js
 <div className="footer">
     <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}><p>Copyright © 2022</p>
         <Link to="/">
@@ -863,4 +864,39 @@ in your App.js folder**
         <Link to="/exchanges">Exchanges</Link>
         <Link to="/news">News</Link>
     </Space>
+```
+
+- remember footer must be inside the div main 
+- When we add content our footer part will go down
+
+**28. Now go to Homepage.jsx**
+
+import milify that's going to format our numbers 
+```jsx
+ // Homepage.jsx
+ import millify from 'millify';
+```
+for ant design import this 
+```jsx
+// Homepage.jsx
+ import { Typography, Row, Col, Statistic } from 'antd'; I
+```
+then add link for this 
+
+```jsx
+// Homepage.jsx
+ import {Link} from 'react-router-dom';
+```
+
+
+**29. For Header Global Crypto Stats go to Homepage.jsx a**
+```jsx
+ const { Title } = Typography;
+const Homepage = () => {
+return(
+    <>
+        <Title level={2} className="heading">Global Crypto Stats from Cryptoxam</Title>
+</>
+)
+}
 ```
