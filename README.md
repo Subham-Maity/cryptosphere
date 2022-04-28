@@ -842,9 +842,25 @@ make sure that is total 6 components in the componets folder
 - Navbar.jsx
 - News.jsx
 
-26. if your look at your website you can see something wrong allignment in the page for fixed this issue just import this
-in your App.js folder 
+**26. if your look at your website you can see something wrong allignment in the page for fixed this issue just import this
+in your App.js folder** 
 ```jsx
 // App.js 
  import 'antd/dist/antd.css';
+```
+
+27.Let's make our footer part open App.js and add this 
+```jsx
+<div className="footer">
+    <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}><p>Copyright © 2022</p>
+        <Link to="/">
+            <p> <a href="https://github.com/Subham-Maity">Owned by Subham Maity</a></p>
+        </Link> <br />
+        All Rights Reserved.
+    </Typography.Title>
+    <Space>
+        <Link to="/">Home</Link>
+        <Link to="/exchanges">Exchanges</Link>
+        <Link to="/news">News</Link>
+    </Space>
 ```

@@ -33,9 +33,9 @@ const App = () => (
         </div>
       </Layout>
       <div className="footer">
-        <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>Copyright © 2021
+        <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}><p>Copyright © 2022</p>
           <Link to="/">
-            Cryptoverse Inc.
+            <p> <a href="https://github.com/Subham-Maity">Owned by Subham Maity</a></p>
           </Link> <br />
           All Rights Reserved.
         </Typography.Title>
