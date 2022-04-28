@@ -5,8 +5,8 @@
 ## Working Frameworks
 
 ### 1. Frontend 
-⭐ **Using RapidAPI** 
-⭐ **ReactJS** 
+⭐ **[Using RapidAPI](https://redux.js.org/)** 
+⭐ **[ReactJS](https://reactjs.org/)** 
 ⭐ **JS** [learn javascript from my js bootcamp [here](https://github.com/Subham-Maity/js-bootcamp)]
 ⭐ **HTML**[learn HTML from my HTML bootcamp [here](https://github.com/Subham-Maity/html-tutorial-for-beginners)]
 ⭐ **CSS**  /Tailwind
@@ -891,6 +891,7 @@ then add link for this
 
 **29. For Header Global Crypto Stats go to Homepage.jsx a**
 ```jsx
+// Homepage.jsx
  const { Title } = Typography;
 const Homepage = () => {
 return(
@@ -899,4 +900,66 @@ return(
 </>
 )
 }
+```
+
+**30.Now we need row and col where span is 12(space) for this do like this** 
+
+- set value 5 later on we update the data don't worry (using api)
+- make total 6 col for different lines (copy one line and add title)
+```jsx
+// Homepage.jsx
+/*
+ const { Title } = Typography;
+const Homepage = () => {
+return(
+    <>
+        <Title level={2} className="heading">Global Crypto Stats from Cryptoxam</Title>
+</>
+)
+}
+*/
+
+            <Row gutter={[32, 32]}>
+                <Col span={12}><Statistic title="Total Cryptocurrencies" value={globalStats.total} /></Col>
+                <Col span={12}><Statistic title="Total Exchanges" value={millify(globalStats.totalExchanges)} /></Col>
+                <Col span={12}><Statistic title="Total Market Cap:" value={`$${millify(globalStats.totalMarketCap)}`} /></Col>
+                <Col span={12}><Statistic title="Total 24h Volume" value={`$${millify(globalStats.total24hVolume)}`} /></Col>
+                <Col span={12}><Statistic title="Total Cryptocurrencies" value={globalStats.total} /></Col>
+                <Col span={12}><Statistic title="Total Markets" value={millify(globalStats.totalMarkets)} /></Col>
+            </Row>
+```
+
+**31. we can fetch real cryptocurrency data from rapid api using the redux toolkit**
+
+to start fetching our data we are going  to go back to the rapid apis hub and  we're going to search for  coin  ranking  once this load you can click on this  blue button right here for you it might  say something different like subscribe  there is a free plan so don't worry  about that and as soon as you're  subscribed you'll be able to click here  to test the endpoint as you can see  you're immediately going to get all of  the possible data right away  so what do we have to do to use this api  well you can go under code snippets and  for now you can simply copy and paste  this options object  back in our app i'm going to close all  the files and folders  and we can go to source and create a new  folder  that folder is going to be called  services  that is redux's new way of fetching data  inside of services you can simply type  cryptoapi.js  and inside of here is where we'll do the  logic of fetching the data from the api  just so we don't forget about it you can  paste the options right here because we  have to use this data later on
+
+
+https://rapidapi.com/Coinranking/api/coinranking1/
+
+```js
+const axios = require("axios");
+
+const options = {
+  method: 'GET',
+  url: 'https://coinranking1.p.rapidapi.com/coins',
+  params: {
+    referenceCurrencyUuid: 'yhjMzLPhuIDl',
+    timePeriod: '24h',
+    'tiers[0]': '1',
+    orderBy: 'marketCap',
+    orderDirection: 'desc',
+    limit: '50',
+    offset: '0'
+  },
+  headers: {
+    'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com',
+    'X-RapidAPI-Key': '1d871cceacmshba48ac5bae3dc58p111f7bjsna1305d8edcc1'
+  }
+};
+
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
 ```
