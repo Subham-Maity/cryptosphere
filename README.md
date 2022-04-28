@@ -719,7 +719,7 @@ Now import this css on your App.js file like this
 //App.js
 import './App.css';
 ```
-**22. navbar - menu**
+**22. navbar - menu** [Home,Cryptocurrencies,Exchange,News ]
 - A menu is a component coming from ant design a menu is going to have a theme equal to dark 
 - and inside there we can have  different menu items so let's create our  first menu
 - we  already imported it but make sure to call it as a component with the opening component tag 
@@ -761,4 +761,90 @@ import './App.css';
 </div>
 );
     
+```
+
+**23. Open app.js and we need Homepage so and inside that we need exchanges cryptocurrencies and news for that 
+just do this**
+```jsx
+// app.js
+<div className="main">
+      <Layout>
+        <div className="routes">
+          <Switch>
+            <Route exact path="/">
+              <Homepage />
+            </Route>
+            <Route exact path="/exchanges">
+              <Exchanges />
+            </Route>
+            <Route exact path="/cryptocurrencies">
+              <Cryptocurrencies />
+            </Route>
+            <Route exact path="/crypto/:coinId">
+              <CryptoDetails />
+            </Route>
+            <Route exact path="/news">
+              <News />
+            </Route>
+          </Switch>
+        </div>
+````
+
+**24. now make Homepage.jsx and then Cryptocurrency.jsx inside the component folder** 
+
+```jsx
+//Homepage.jsx
+ import React from 'react'
+const Homepage = () ⇒ {
+return (
+<div>
+Homepage
+</div>
+)
+export default Homepage
+```
+same do this in Cryptocurrencies.jsx
+
+```jsx
+//Cryptocurrencies.jsx
+ import React from 'react'
+
+const Cryptocurrencies = () ⇒ {
+return (
+<div>
+    Cryptocurrencies
+</div>)
+}
+export default Cryptocurrencies
+
+```
+
+Let's do the same for Exchanges.jsx and News.js as I did both earlier 
+
+**25. Now export components in index js(components )like this** 
+
+```jsx
+// indx.ja(component)
+export { default as Homepage } from './Homepage';
+export { default as Navbar } from './Navbar';
+export { default as News } from './News';
+export { default as Cryptocurrencies } from './Cryptocurrencies';
+export { default as Exchanges } from './Exchanges';
+export { default as CryptoDetails } from './CryptoDetails';
+```
+
+make sure that is total 6 components in the componets folder
+- Cryptocurrencies.jsx
+- CryptoDetails.jsx
+- Exchanges.jsx
+- Homepage.jsx
+- index.js (for export the components)
+- Navbar.jsx
+- News.jsx
+
+26. if your look at your website you can see something wrong allignment in the page for fixed this issue just import this
+in your App.js folder 
+```jsx
+// App.js 
+ import 'antd/dist/antd.css';
 ```
