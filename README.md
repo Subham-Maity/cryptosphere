@@ -824,7 +824,7 @@ Let's do the same for Exchanges.jsx and News.js as I did both earlier
 **25. Now export components in index js(components )like this** 
 
 ```jsx
-// indx.ja(component)
+// indx.js(component)
 export { default as Homepage } from './Homepage';
 export { default as Navbar } from './Navbar';
 export { default as News } from './News';
@@ -963,3 +963,55 @@ const options = {
 };
 ```
 
+
+**32. but before we set crypto API we need to  create a store for our redux application  a store is one central state of truth  meaning your entire applications state, we can create a store by creating a  new folder in the source folder called app inside the app you can create one  file called store.js  redux simplified the process of creating  a store significantly you can simply say  import  and then import to configure store  function from  add redux js**
+
+```jsx
+//store.js(src->app)
+import { configureStore } from '@reduxjs/toolkit';
+```
+
+**33.Export default configure store you need to call  it as a function and then pass an object  inside there  the first parameter in this object is  going to be reducer and for now we're  going to leave that as an empty object.**
+
+```jsx
+//store.js(src->app)
+/*import { configureStore } from '@reduxjs/toolkit';*/
+
+
+
+export default configureStore({
+  reducer: {
+      },
+});
+```
+
+**34. Now that we're exporting the store let's actually use it inside our index.js**
+```jsx
+//index.js
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+
+import App from './App';
+import store from './app/store';
+```
+- import App from './App';
+import store from './app/store';  this is the variable we have to provide to our provider 
+so import { Provider } from 'react-redux';
+
+
+- we have to do a  similar thing with it with this router  simply we have to wrap the app  by saying provider store and then  enclosing our app into that  as you can see we are now wrapping our  app with the router and also with the  provider where we are setting the store  variable to be equal to store
+
+```jsx
+//index.js
+ReactDOM.render(
+    <Router>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </Router>
+document.getElementById('root'),
+);
+```
+
+- we can actually create the first piece of the data fetching functionality
