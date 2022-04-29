@@ -942,7 +942,7 @@ https://rapidapi.com/Coinranking/api/coinranking1/
 
 
 ```js
-//cryptoApi.js(services)
+//cryptoApi.js(src->services)
 
 const options = {
     method: 'GET',
@@ -1014,4 +1014,90 @@ document.getElementById('root'),
 );
 ```
 
-- we can actually create the first piece of the data fetching functionality
+35. we can actually create the first piece of the data fetching functionality we can actually create the first  piece of the data fetching functionality  and we can do that by importing a few  things from redux js
+```jsx
+//cryptoApi.js(src->services)
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+
+//for header 
+const cryptoNewsHeaders = {
+    'x-bingapis-sdk': 'true',
+    'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com',
+    'X-RapidAPI-Key': '1d871cceacmshba48ac5bae3dc58p111f7bjsna1305d8edcc1'
+};
+```
+later on we're going to replace these keys with environment variables so that they are not available to the public 
+
+now store the url on the baseUrl variable 
+```jsx
+//cryptoApi.js(src->services)
+ const baseUrl = 'https://coinranking1.p.rapidapi.com';
+```
+
+36.Export const crypto api  our crypto api is going to be equal to  create api that's coming from redux and  then we have to pass some options inside  of an object  first thing is going to be the reducer  path so we have to say what is this  reducer for  and you can simply provide the name here  in this case let's say crypto api  then you have to provide the base query  so right here base query is going to be  equal to  fetch base query which is a function  that accepts an object and inside of  there you can simply say base url is  equal to base url it's not bas url it's  base url  and the final and the most important  thing are the end points so we can say  endpoints  and that's going to be equal to a  function where you get a builder as a  first parameter  and that function instantly returns an  object  inside of that object you can specify  the names of the endpoints  for example something like get  cryptos  we can name it anything you want  and that's going to be equal to  dot query  you pass an object as options again and  then inside of there you say query  is equal to  and you provide a function that's going  to point to that specific request  so let's say that we want to get the  information for the exchanges in that  case it would simply be something like  forward slash  exchanges
+
+```jsx
+//cryptoApi.js(src->services)
+ export const cryptoApi = createApi({
+    reducerPath: 'cryptoApi',
+});
+baseQuery: fetchBaseQuery({ baseUrl }),
+    endpoints: (builder) ⇒ ({
+    getCryptos: builder.query({
+        query: () ⇒ '/exchanges'
+})
+})
+```
+**37. if we want to make  this request we also need to pass the  headers so we can create a simple  utility function that's going to simply  add the url and the headers to our call  we can do that by saying const create  request  and that's going to be equal to a  function that accepts a url and simply  returns an object that contains the url  which is equal to the url and finally it  contains the headers which are equal to  crypto api headers**
+```jsx
+//cryptoApi.js(src->services)
+/* const baseUrl = 'https://coinranking1.p.rapidapi.com';*/
+ const createRequest = (url) ⇒ ({ url, headers: cryptoApiHeaders })
+/*
+export const cryptoApi = createApi({
+    reducerPath: 'cryptoApi',
+});
+baseQuery: fetchBaseQuery({ baseUrl }),
+    endpoints: (builder) ⇒ ({
+    getCryptos: builder.query({
+        query: () ⇒ '/exchanges'
+})
+})*/
+
+```
+
+**38.now instead of simply calling the  forward slash exchanges we can call  create request  and in there we can simply pass the url  which is in this case forward slash  exchanges**
+
+```jsx
+//cryptoApi.js(src->services)
+/* export const cryptoApi = createApi({
+    reducerPath: 'cryptoApi',
+});
+baseQuery: fetchBaseQuery({ baseUrl }),
+    endpoints: (builder) ⇒ ({
+    getCryptos: builder.query({*/
+
+        query: () ⇒ createRequest('/exchanges')
+/*
+})
+})*/
+
+```
+
+**38.we created a store in a storejs we  passed that store variable to a provider  that we are wrapping our app with as you  can see it's right here  and then we created a specific api that  we're going to use to fetch api data  from rapid api  now we need to find a way to connect  this api to the store  and we can do that by importing that api  import that's going to be crypto api  and that's going to be coming from  dot slash services slash  crypto  api  and the only thing you have to do is  inside of the reducers object  in square brackets  crypto  api  dot reducer path  and then that is equal to crypto api  that reducer  redux is doing everything for you you  just have to specify this for every  single reducer that you create as you  can see  we create an api and therefore we have  all of these variables like reducer path  and reducer  now our application is connected now we  have to see which data do we have to get  first and then fetch it from the  appropriate endpoint from the api**
+
+```jsx
+//store.js(src->app)
+import { configureStore } from '@reduxjs/toolkit';
+
+import { cryptoApi } from '../services/cryptoApi';
+
+
+export default configureStore({
+  reducer: {
+    [cryptoApi.reducerPath]: cryptoApi.reducer,
+   
+  },
+});
+
+```
