@@ -17,9 +17,9 @@ const App = () => (
             <Route exact path="/">
               <Homepage />
             </Route>
-            <Route exact path="/exchanges">
-              <Exchanges />
-            </Route>
+            {/*<Route exact path="/exchanges">*/}
+            {/*  <Exchanges />*/}
+            {/*</Route>*/}
             <Route exact path="/cryptocurrencies">
               <Cryptocurrencies />
             </Route>
@@ -33,15 +33,15 @@ const App = () => (
         </div>
       </Layout>
       <div className="footer">
-        <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}><p>Copyright © 2022</p>
+        <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>Copyright © 2021&nbsp;&nbsp;
           <Link to="/">
-            <p> <a href="https://github.com/Subham-Maity">Owned by Subham Maity</a></p>
+            Subham Cryptosphere Inc.
           </Link> <br />
           All Rights Reserved.
         </Typography.Title>
         <Space>
           <Link to="/">Home</Link>
-          <Link to="/exchanges">Exchanges</Link>
+          {/*<Link to="/exchanges">Exchanges</Link>*/}
           <Link to="/news">News</Link>
         </Space>
       </div>

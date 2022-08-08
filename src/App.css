@@ -325,7 +325,7 @@ width: 70%;
     color: #0071bd;
 }
 .chart-title{
-    color: #0071bd !important;
+    color: #1c011a !important;
 }
 .price-container{
     display: flex !important;
@@ -371,7 +371,7 @@ width: 70%;
 }
 
 .footer {
-    background-color: #1c3546;
+    background-color: #001529;
     display: flex;
     flex-direction: column;
     padding: 20px;
