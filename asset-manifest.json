@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/my-app/static/css/main.3ba7ca3a.chunk.css",
+    "main.js": "/my-app/static/js/main.c6ee08d5.chunk.js",
+    "main.js.map": "/my-app/static/js/main.c6ee08d5.chunk.js.map",
+    "runtime-main.js": "/my-app/static/js/runtime-main.e79011d1.js",
+    "runtime-main.js.map": "/my-app/static/js/runtime-main.e79011d1.js.map",
+    "static/css/2.786ae0dd.chunk.css": "/my-app/static/css/2.786ae0dd.chunk.css",
+    "static/js/2.8e1cbe7c.chunk.js": "/my-app/static/js/2.8e1cbe7c.chunk.js",
+    "static/js/2.8e1cbe7c.chunk.js.map": "/my-app/static/js/2.8e1cbe7c.chunk.js.map",
+    "index.html": "/my-app/index.html",
+    "static/css/2.786ae0dd.chunk.css.map": "/my-app/static/css/2.786ae0dd.chunk.css.map",
+    "static/css/main.3ba7ca3a.chunk.css.map": "/my-app/static/css/main.3ba7ca3a.chunk.css.map",
+    "static/js/2.8e1cbe7c.chunk.js.LICENSE.txt": "/my-app/static/js/2.8e1cbe7c.chunk.js.LICENSE.txt",
+    "static/media/cryptocurrency.1548aced.png": "/my-app/static/media/cryptocurrency.1548aced.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e79011d1.js",
+    "static/css/2.786ae0dd.chunk.css",
+    "static/js/2.8e1cbe7c.chunk.js",
+    "static/css/main.3ba7ca3a.chunk.css",
+    "static/js/main.c6ee08d5.chunk.js"
+  ]
+}
