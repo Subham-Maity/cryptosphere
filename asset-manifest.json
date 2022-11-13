@@ -1,24 +1,16 @@
 {
   "files": {
-    "main.css": "/cryptosphere/static/css/main.3ba7ca3a.chunk.css",
-    "main.js": "/cryptosphere/static/js/main.c6ee08d5.chunk.js",
-    "main.js.map": "/cryptosphere/static/js/main.c6ee08d5.chunk.js.map",
-    "runtime-main.js": "/cryptosphere/static/js/runtime-main.5f5a3ee8.js",
-    "runtime-main.js.map": "/cryptosphere/static/js/runtime-main.5f5a3ee8.js.map",
-    "static/css/2.786ae0dd.chunk.css": "/cryptosphere/static/css/2.786ae0dd.chunk.css",
-    "static/js/2.7ed91da8.chunk.js": "/cryptosphere/static/js/2.7ed91da8.chunk.js",
-    "static/js/2.7ed91da8.chunk.js.map": "/cryptosphere/static/js/2.7ed91da8.chunk.js.map",
+    "main.css": "/cryptosphere/static/css/main.1cc32510.css",
+    "main.js": "/cryptosphere/static/js/main.7d0804ad.js",
+    "static/js/787.7ddb05bc.chunk.js": "/cryptosphere/static/js/787.7ddb05bc.chunk.js",
+    "static/media/cryptocurrency.png": "/cryptosphere/static/media/cryptocurrency.8e3cf9c07d2ab95298c2.png",
     "index.html": "/cryptosphere/index.html",
-    "static/css/2.786ae0dd.chunk.css.map": "/cryptosphere/static/css/2.786ae0dd.chunk.css.map",
-    "static/css/main.3ba7ca3a.chunk.css.map": "/cryptosphere/static/css/main.3ba7ca3a.chunk.css.map",
-    "static/js/2.7ed91da8.chunk.js.LICENSE.txt": "/cryptosphere/static/js/2.7ed91da8.chunk.js.LICENSE.txt",
-    "static/media/cryptocurrency.1548aced.png": "/cryptosphere/static/media/cryptocurrency.1548aced.png"
+    "main.1cc32510.css.map": "/cryptosphere/static/css/main.1cc32510.css.map",
+    "main.7d0804ad.js.map": "/cryptosphere/static/js/main.7d0804ad.js.map",
+    "787.7ddb05bc.chunk.js.map": "/cryptosphere/static/js/787.7ddb05bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.5f5a3ee8.js",
-    "static/css/2.786ae0dd.chunk.css",
-    "static/js/2.7ed91da8.chunk.js",
-    "static/css/main.3ba7ca3a.chunk.css",
-    "static/js/main.c6ee08d5.chunk.js"
+    "static/css/main.1cc32510.css",
+    "static/js/main.7d0804ad.js"
   ]
 }
